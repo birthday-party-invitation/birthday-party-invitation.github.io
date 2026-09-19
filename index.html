@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="invitation">
+
+    <!-- ОДНА БОЛЬШАЯ КАРТИНКА -->
+    <img class="invitation-bg" src="img/1.png" alt="">
+
+    <!-- ОБРАТНЫЙ ОТСЧЁТ -->
+    <div class="countdown">
+
+        <div class="countdown-item">
+            <span id="days">000</span>
+            
+        </div>
+
+        <div class="countdown-item">
+            <span id="hours">00</span>
+            
+        </div>
+
+        <div class="countdown-item">
+            <span id="minutes">00</span>
+            
+        </div>
+
+        <div class="countdown-item">
+            <span id="seconds">00</span>
+            
+        </div>
+
+    </div>
+
+
+    <!-- АНКЕТА -->
+    <form class="rsvp-form" id="rsvpForm">
+
+    <!-- Web3Forms -->
+    <input type="hidden" name="access_key" value="765529b4-2dd1-4210-a479-865e64bb3c55">
+    <input type="hidden" name="subject" value="Новый ответ на приглашение">
+
+
+    <!-- ИМЯ -->
+    <div class="form-name">
+
+        <label class="name-title">
+            Ваше имя и фамилия <b>*</b>
+        </label>
+
+        <input
+            class="name-input"
+            type="text"
+            name="Имя и фамилия"
+            placeholder="Анна Петрова"
+            required
+        >
+
+    </div>
+
+
+    <!-- ПРИСУТСТВИЕ -->
+    <div class="form-attendance">
+
+        <p class="attendance-title">
+            Сможете ли вы прийти? <b>*</b>
+        </p>
+
+        <label class="attendance-option">
+            <input
+                type="radio"
+                name="Присутствие"
+                value="Да, с удовольствием!"
+                required
+            >
+            <span>Да, с удовольствием! ♡</span>
+        </label>
+
+        <label class="attendance-option">
+            <input
+                type="radio"
+                name="Присутствие"
+                value="К сожалению, не смогу"
+            >
+            <span>К сожалению, не смогу</span>
+        </label>
+
+    </div>
+
+
+    <!-- КОЛИЧЕСТВО ГОСТЕЙ -->
+    <div class="form-guests">
+
+        <p class="guests-title">
+            Количество гостей
+        </p>
+
+        <div class="guest-counter">
+
+            <button type="button" id="minusGuest">−</button>
+
+            <span id="guestCount">1</span>
+
+            <button type="button" id="plusGuest">+</button>
+
+        </div>
+
+        <input
+            type="hidden"
+            name="Количество гостей"
+            id="guestInput"
+            value="1"
+        >
+
+    </div>
+
+
+    <!-- КОММЕНТАРИЙ -->
+    <div class="form-comment">
+
+        <label class="comment-title">
+            Комментарий (по желанию)
+        </label>
+
+        <input
+            class="comment-input"
+            type="text"
+            name="Комментарий"
+            placeholder="Есть ли особые пожелания"
+        >
+
+    </div>
+
+
+    <!-- КНОПКА -->
+    <button class="submit-btn" type="submit">
+        <img src="img/2.png" alt="Отправить ответ">
+    </button>
+
+    <div class="form-message" id="formMessage"></div>
+
+</form>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
